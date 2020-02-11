@@ -9,13 +9,13 @@ class PlayerTest {
     Grid grid;
 
     @BeforeEach
-    private void initialize() {
+    public void initialize() {
         grid = mock(Grid.class);
         player = new Player(grid);
     }
 
     @AfterEach
-    private void close() {
+    public void close() {
         player = null;
         grid = null;
     }
