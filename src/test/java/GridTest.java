@@ -83,6 +83,16 @@ class GridTest {
 
         assertTrue(grid.gameOver());
     }
+    @Test
+    public void testShouldDenoteGameOverWhenAllEntriesInADiagonalHasMoveX() {
+        Grid grid = new Grid();
+
+        grid.place(Move.X, 1, 1);
+        grid.place(Move.X, 2, 2);
+        grid.place(Move.X, 3, 3);
+
+        assertTrue(grid.gameOver());
+    }
 
 
 }

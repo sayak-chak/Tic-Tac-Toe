@@ -19,7 +19,16 @@ public class Grid {
     }
 
     public boolean gameOver() {
-        return gameOverAlongARow() || gameOverAlongAColumn();
+        return gameOverAlongARow() || gameOverAlongAColumn() || gameOverAlongADiagonal();
+    }
+
+    private boolean gameOverAlongADiagonal() {
+        int rowIndex = 0, colIndex = 0;
+        Move check = grid[rowIndex][colIndex];
+        while (colIndex < Constraint.lengthOfGridSide && rowIndex < Constraint.lengthOfGridSide) {
+            if (grid[rowIndex++][colIndex++] != check) return false;
+        }
+        return true;
     }
 
     private boolean gameOverAlongAColumn() {
