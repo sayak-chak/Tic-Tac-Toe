@@ -30,18 +30,20 @@ class PlayerTest {
 
     @Test
     public void playerShouldPlaceMoveYInUpperLeftMostCornerOfGrid() {
-        player.place(Move.Y, 1, 1);
+        player.place(Move.O, 1, 1);
 
-        verify(grid, times(1)).place(Move.Y, 1, 1);
+        verify(grid, times(1)).place(Move.O, 1, 1);
 
     }
 
     @Test
     public void playerShouldPlaceMoveXInLowerRightMostCornerOfGrid() {
-        player.place(Move.X, RULE.lengthOfGridSide, RULE.lengthOfGridSide);
+        player.place(Move.X, Constraint.lengthOfGridSide, Constraint.lengthOfGridSide);
 
-        verify(grid, times(1)).place(Move.X, RULE.lengthOfGridSide, RULE.lengthOfGridSide);
-
+        verify(grid, times(1)).place(Move.X, Constraint.lengthOfGridSide, Constraint.lengthOfGridSide);
     }
 
+    @Test
+    void name() {
+    }
 }

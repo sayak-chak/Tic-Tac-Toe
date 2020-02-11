@@ -6,7 +6,7 @@ public class Grid {
     }
 
     public static Move[][] create() {
-        return new Move[RULE.lengthOfGridSide][RULE.lengthOfGridSide];
+        return new Move[Constraint.lengthOfGridSide][Constraint.lengthOfGridSide];
     }
 
     public void place(Move move, int rowNumber, int colNumber) {

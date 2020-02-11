@@ -18,7 +18,7 @@ class GridTest {
 
     @Test
     public void testShouldCreateAnEmptyGrid() {
-        Move[][] expectedGrid = new Move[RULE.lengthOfGridSide][RULE.lengthOfGridSide];
+        Move[][] expectedGrid = new Move[Constraint.lengthOfGridSide][Constraint.lengthOfGridSide];
 
         Move[][] actualGrid = Grid.create();
 
@@ -38,18 +38,18 @@ class GridTest {
     public void testShouldPlaceMoveYOnUpperLeftMostCornerOfGrid() {
         Grid grid = new Grid();
 
-        grid.place(Move.Y, 1, 1);
+        grid.place(Move.O, 1, 1);
 
-        assertEquals(Move.Y, grid.getMoveAtPosition(1, 1));
+        assertEquals(Move.O, grid.getMoveAtPosition(1, 1));
     }
 
     @Test
     public void testShouldPlaceMoveXOnLowerRightMostCornerOfGrid() {
         Grid grid = new Grid();
 
-        grid.place(Move.X, RULE.lengthOfGridSide, RULE.lengthOfGridSide);
+        grid.place(Move.X, Constraint.lengthOfGridSide, Constraint.lengthOfGridSide);
 
-        assertEquals(Move.X, grid.getMoveAtPosition(RULE.lengthOfGridSide, RULE.lengthOfGridSide));
+        assertEquals(Move.X, grid.getMoveAtPosition(Constraint.lengthOfGridSide, Constraint.lengthOfGridSide));
     }
 
 

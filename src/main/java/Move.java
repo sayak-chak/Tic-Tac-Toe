@@ -1,3 +1,3 @@
 public enum Move {
-    Y, X
+    O, X
 }
