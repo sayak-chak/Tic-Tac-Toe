@@ -2,8 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class GridTest {
     private boolean checkIfGridsAreEqual(Move[][] expectedGrid, Move[][] actualGrid) {
@@ -57,12 +56,21 @@ class GridTest {
         Grid grid = new Grid();
 
         grid.place(Move.X, 1, 1);
-        grid.place(Move.X, 1, 1);
-        grid.place(Move.X, 1, 1);
+        grid.place(Move.X, 1, 2);
+        grid.place(Move.X, 1, 3);
 
         assertTrue(grid.gameOver());
+    }
 
+    @Test
+    public void testShouldDenoteGameNotOverWhenTwoEntriesInTopRowHasMoveX() {
+        Grid grid = new Grid();
 
+        grid.place(Move.O, 1, 1);
+        grid.place(Move.X, 1, 1);
+        grid.place(Move.X, 1, 1);
+
+        assertFalse(grid.gameOver());
     }
 
 

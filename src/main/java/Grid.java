@@ -19,7 +19,15 @@ public class Grid {
     }
 
     public boolean gameOver() {
-        return true;
+        for (Move[] row : grid) {
+            int rowIndex = 0;
+            Move check = row[rowIndex];
+            for (Move move : row) {
+                if (move != check) return false;
+            }
+            return true;
+        }
+        return false;
     }
 
     private int getIndex(int position) {
