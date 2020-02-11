@@ -26,21 +26,30 @@ class GridTest {
     }
 
     @Test
-    public void testShouldPlaceAXOnLeftMostCornerOfGrid() {
+    public void testShouldPlaceMoveXOnLeftMostCornerOfGrid() {
         Grid grid = new Grid();
 
-        grid.place(Move.X);
+        grid.place(Move.X, 1, 1);
 
-        assertEquals(Move.X, grid.getMoveAtPosition());
+        assertEquals(Move.X, grid.getMoveAtPosition(1, 1));
     }
 
     @Test
-    public void testShouldPlaceAYOnLeftMostCornerOfGrid() {
+    public void testShouldPlaceMoveYOnLeftMostCornerOfGrid() {
         Grid grid = new Grid();
 
-        grid.place(Move.Y);
+        grid.place(Move.Y, 1, 1);
 
-        assertEquals(Move.Y, grid.getMoveAtPosition());
+        assertEquals(Move.Y, grid.getMoveAtPosition(1, 1));
+    }
+
+    @Test
+    public void testShouldPlaceMoveXOnRightMostCornerOfGrid() {
+        Grid grid = new Grid();
+
+        grid.place(Move.X, RULE.lengthOfGridSide, RULE.lengthOfGridSide);
+
+        assertEquals(Move.X, grid.getMoveAtPosition(RULE.lengthOfGridSide, RULE.lengthOfGridSide));
     }
 
 

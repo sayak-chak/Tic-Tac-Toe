@@ -9,12 +9,16 @@ public class Grid {
         return new Move[RULE.lengthOfGridSide][RULE.lengthOfGridSide];
     }
 
-    public void place(Move move) {
-        grid[0][0] = move;
+    public void place(Move move, int rowNumber, int colNumber) {
+        grid[getIndex(rowNumber)][getIndex(colNumber)] = move;
     }
 
 
-    public Move getMoveAtPosition() {
-        return grid[0][0];
+    public Move getMoveAtPosition(int rowNumber, int colNumber) {
+        return grid[getIndex(rowNumber)][getIndex(colNumber)];
+    }
+
+    private int getIndex(int position) {
+        return position - 1;
     }
 }
