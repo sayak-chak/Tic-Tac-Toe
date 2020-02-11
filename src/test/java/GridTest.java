@@ -52,5 +52,18 @@ class GridTest {
         assertEquals(Move.X, grid.getMoveAtPosition(Constraint.lengthOfGridSide, Constraint.lengthOfGridSide));
     }
 
+    @Test
+    public void testShouldDenoteGameOverWhenAllEntriesInTopRowHasMoveX() {
+        Grid grid = new Grid();
+
+        grid.place(Move.X, 1, 1);
+        grid.place(Move.X, 1, 1);
+        grid.place(Move.X, 1, 1);
+
+        assertTrue(grid.gameOver());
+
+
+    }
+
 
 }

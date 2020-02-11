@@ -18,7 +18,12 @@ public class Grid {
         return grid[getIndex(rowNumber)][getIndex(colNumber)];
     }
 
+    public boolean gameOver() {
+        return true;
+    }
+
     private int getIndex(int position) {
         return position - 1;
     }
+
 }
