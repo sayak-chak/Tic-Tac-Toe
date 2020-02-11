@@ -33,8 +33,8 @@ public class Grid {
 
     private boolean gameOverAlongAColumn() {
         for (int colIndex = 0; colIndex < Constraint.lengthOfGridSide; colIndex++) {
-            Move check = grid[0][colIndex];
-            for (int rowIndex = 0; rowIndex < Constraint.lengthOfGridSide; rowIndex++) {
+            Move check = grid[Constraint.startingIndex][colIndex];
+            for (int rowIndex = Constraint.startingIndex; rowIndex < Constraint.lengthOfGridSide; rowIndex++) {
                 if (grid[rowIndex][colIndex] != check) return false;
             }
         }
@@ -43,7 +43,7 @@ public class Grid {
 
     private boolean gameOverAlongARow() {
         for (Move[] row : grid) {
-            int rowIndex = 0;
+            int rowIndex = Constraint.startingIndex;
             Move check = row[rowIndex];
             for (Move move : row) {
                 if (move != check) return false;
