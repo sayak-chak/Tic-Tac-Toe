@@ -19,6 +19,10 @@ public class Grid {
     }
 
     public boolean gameOver() {
+        return gameOverAlongARow();
+    }
+
+    private boolean gameOverAlongARow() {
         for (Move[] row : grid) {
             int rowIndex = 0;
             Move check = row[rowIndex];
