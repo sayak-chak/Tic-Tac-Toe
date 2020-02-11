@@ -43,7 +43,4 @@ class PlayerTest {
         verify(grid, times(1)).place(Move.X, Constraint.lengthOfGridSide, Constraint.lengthOfGridSide);
     }
 
-    @Test
-    void name() {
-    }
 }
