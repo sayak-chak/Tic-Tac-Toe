@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class GridTest {
@@ -23,5 +24,15 @@ class GridTest {
 
         assertTrue(checkIfGridsAreEqual(expectedGrid, actualGrid));
     }
+
+    @Test
+    public void testShouldPlaceAXOnLeftMostCornerOfGrid() {
+        Grid grid = new Grid();
+
+        grid.place();
+
+        assertEquals(Move.X, grid.getMoveAtPosition());
+    }
+
 
 }
