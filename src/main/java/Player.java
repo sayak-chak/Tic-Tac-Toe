@@ -5,7 +5,7 @@ public class Player {
         this.grid = grid;
     }
 
-    public void place(Move move) {
-        grid.place(move, 1, 1);
+    public void place(Move move, int rowNumber, int colNumber) {
+        grid.place(move, rowNumber, colNumber);
     }
 }
