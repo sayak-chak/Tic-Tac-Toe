@@ -21,7 +21,7 @@ class PlayerTest {
     }
 
     @Test
-    public void playerShouldPlaceMoveXInLeftMostCornerOfGrid() {
+    public void playerShouldPlaceMoveXInUpperLeftMostCornerOfGrid() {
         player.place(Move.X, 1, 1);
 
         verify(grid, times(1)).place(Move.X, 1, 1);
@@ -29,7 +29,7 @@ class PlayerTest {
     }
 
     @Test
-    public void playerShouldPlaceMoveYInLeftMostCornerOfGrid() {
+    public void playerShouldPlaceMoveYInUpperLeftMostCornerOfGrid() {
         player.place(Move.Y, 1, 1);
 
         verify(grid, times(1)).place(Move.Y, 1, 1);
@@ -37,7 +37,7 @@ class PlayerTest {
     }
 
     @Test
-    public void playerShouldPlaceMoveXInRightMostCornerOfGrid() {
+    public void playerShouldPlaceMoveXInLowerRightMostCornerOfGrid() {
         player.place(Move.X, RULE.lengthOfGridSide, RULE.lengthOfGridSide);
 
         verify(grid, times(1)).place(Move.X, RULE.lengthOfGridSide, RULE.lengthOfGridSide);

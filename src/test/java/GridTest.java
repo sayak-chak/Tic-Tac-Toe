@@ -26,7 +26,7 @@ class GridTest {
     }
 
     @Test
-    public void testShouldPlaceMoveXOnLeftMostCornerOfGrid() {
+    public void testShouldPlaceMoveXOnUpperLeftMostCornerOfGrid() {
         Grid grid = new Grid();
 
         grid.place(Move.X, 1, 1);
@@ -35,7 +35,7 @@ class GridTest {
     }
 
     @Test
-    public void testShouldPlaceMoveYOnLeftMostCornerOfGrid() {
+    public void testShouldPlaceMoveYOnUpperLeftMostCornerOfGrid() {
         Grid grid = new Grid();
 
         grid.place(Move.Y, 1, 1);
@@ -44,7 +44,7 @@ class GridTest {
     }
 
     @Test
-    public void testShouldPlaceMoveXOnRightMostCornerOfGrid() {
+    public void testShouldPlaceMoveXOnLowerRightMostCornerOfGrid() {
         Grid grid = new Grid();
 
         grid.place(Move.X, RULE.lengthOfGridSide, RULE.lengthOfGridSide);
