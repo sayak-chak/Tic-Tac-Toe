@@ -23,4 +23,5 @@ class GridTest {
 
         assertTrue(checkIfGridsAreEqual(expectedGrid, actualGrid));
     }
+
 }
