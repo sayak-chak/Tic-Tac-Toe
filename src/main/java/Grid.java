@@ -9,12 +9,12 @@ public class Grid {
         return new Move[RULE.lengthOfGridSide][RULE.lengthOfGridSide];
     }
 
-    public void place() {
-        grid[0][0] = Move.X;
+    public void place(Move move) {
+        grid[0][0] = move;
     }
 
 
     public Move getMoveAtPosition() {
-        return Move.X;
+        return grid[0][0];
     }
 }

@@ -29,9 +29,18 @@ class GridTest {
     public void testShouldPlaceAXOnLeftMostCornerOfGrid() {
         Grid grid = new Grid();
 
-        grid.place();
+        grid.place(Move.X);
 
         assertEquals(Move.X, grid.getMoveAtPosition());
+    }
+
+    @Test
+    public void testShouldPlaceAYOnLeftMostCornerOfGrid() {
+        Grid grid = new Grid();
+
+        grid.place(Move.Y);
+
+        assertEquals(Move.Y, grid.getMoveAtPosition());
     }
 
 
