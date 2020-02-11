@@ -22,9 +22,18 @@ class PlayerTest {
 
     @Test
     public void playerShouldPlaceMoveXInLeftMostCornerOfGrid() {
-        player.place();
+        player.place(Move.X);
 
         verify(grid, times(1)).place(Move.X, 1, 1);
 
     }
+
+    @Test
+    public void playerShouldPlaceMoveYInLeftMostCornerOfGrid() {
+        player.place(Move.Y);
+
+        verify(grid, times(1)).place(Move.Y, 1, 1);
+
+    }
+
 }
